@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2>Register Student</h2>
+  <form method="POST" enctype="multipart/form-data" class="p-3 border rounded bg-white">
+    <div class="mb-3">
+      <label>Name</label>
+      <input type="text" name="name" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label>Reg No</label>
+      <input type="text" name="regno" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label>Photo</label>
+      <input type="file" name="photo" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Register</button>
+  </form>
+{% endblock %}

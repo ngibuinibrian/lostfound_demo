@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2>Student Info</h2>
+  <div class="card p-3">
+    <p><b>Name:</b> {{ student[0] }}</p>
+    <p><b>Reg No:</b> {{ student[1] }}</p>
+    <img src="/{{ student[2] }}" width="150" class="mb-3"><br>
+
+    {% if qr_path %}
+      <h3>Temporary QR ID</h3>
+      <img src="/{{ qr_path }}" width="200">
+      <p class="text-muted">Show this QR to security for verification</p>
+    {% else %}
+      <p class="text-success"><b>✅ Verified ID</b></p>
+    {% endif %}
+  </div>
+{% endblock %}
